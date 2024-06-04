@@ -57,14 +57,18 @@ class Auteur {
         $this->bibliographie=array_diff($this->bibliographie,[$livre]);
         return;
     }
-
-    public function printBibliographie():void{
+    
+    /**
+     * printBibliographie
+     *
+     * @return string HTML Entities 
+     */
+    public function printBibliographie():string{
         $retour = "<h2>Livres de $this</h2> <br>";
         foreach ($this->bibliographie as $livre) {
             $retour.="$livre <br>";
         }
-        echo $retour;
-        return;
+        return $retour;
     }
 
 

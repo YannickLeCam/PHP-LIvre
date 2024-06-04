@@ -23,6 +23,6 @@ $l1 = new Livre("Les fourmies",821,new DateTime("2005-01-01"),16,$a1);
 $l1 = new Livre("Les fourmies 2",780,new DateTime("2006-01-01"),18,$a1);
 $l1 = new Livre("L'encyclopédie des fourmies ",915,new DateTime("2012-03-05"),19,$a1);
 
-$a1->printBibliographie();
+echo $a1->printBibliographie();
 
 ?>

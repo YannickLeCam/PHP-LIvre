@@ -9,11 +9,11 @@ class Livre {
     
     private DateTime $parution;
 
-    private int $prix;
+    private float $prix;
     
     private Auteur $auteur;
     
-    public function __construct(string $titre,int $nbPages,DateTime $parution,int $prix,Auteur $auteur) {
+    public function __construct(string $titre,int $nbPages,DateTime $parution,float $prix,Auteur $auteur) {
         $this->titre = $titre;
         $this->nbPages = $nbPages;
         $this->parution = $parution;
@@ -28,17 +28,17 @@ class Livre {
         return "$this->titre(" .$this->parution->format("Y").") : $this->nbPages pages / $this->prix €";
     }
 
-    public function getTitre()
+    public function getTitre():string
     {
         return $this->titre;
     }
-    public function setTitre($titre)
+    public function setTitre($titre):void
     {
         $this->titre = $titre;
     }
 
     
-    public function getNbPages()
+    public function getNbPages():int
     {
         return $this->nbPages;
     }
@@ -52,13 +52,13 @@ class Livre {
     {
         $this->parution = $parution;
     }
-    public function getParution()
+    public function getParution():DateTime
     {
         return $this->parution;
     }
 
 
-    public function getAuteur()
+    public function getAuteur():Auteur
     {
         return $this->auteur;
     }
@@ -68,7 +68,7 @@ class Livre {
 
     }
 
-    public function getPrix()
+    public function getPrix():float
     {
         return $this->prix;
     }
